@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schalel Perdomo | Portafolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#6b21a8', 
+                        primaryLight: '#9333ea',
+                        darkBg: '#121212',
+                        darkCard: '#1e1e1e',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        
+        .glow-avatar {
+            box-shadow: 0 0 40px rgba(147, 51, 234, 0.4);
+            border: 2px solid rgba(147, 51, 234, 0.3);
+        }
+        
+        
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        
+    </style>
+</head>
+<body class="bg-[#0f0f11] text-gray-200 font-sans antialiased overflow-x-hidden">
+
+    
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-[#0f0f11]/80 border-b border-gray-800" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex justify-between items-center h-20">
+                
+                <a href="#inicio" class="text-2xl font-bold tracking-tight text-white hover:text-primaryLight transition-colors">
+                    Schalel<span class="text-primaryLight">Perdomo</span>
+                </a>
+
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-sm font-medium hover:text-white text-gray-400 transition-colors">Inicio</a>
+                    <a href="#especialidades" class="text-sm font-medium hover:text-white text-gray-400 transition-colors">Especialidades</a>
+                    <a href="#experiencia" class="text-sm font-medium hover:text-white text-gray-400 transition-colors">Experiencia</a>
+                    
+                    <a href="#practicas" class="text-sm font-medium hover:text-white text-gray-400 transition-colors">Prácticas</a>
+                    <a href="#proyectos" class="text-sm font-medium hover:text-white text-gray-400 transition-colors">Proyectos</a>
+                    <a href="https://schalelportafolio.infinityfreeapp.com/" class="text-sm font-medium hover:text-white text-gray-400 transition-colors">Portafolio antiguo</a>
+                </div>
+
+                
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1e1e24] border-b border-gray-800">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col text-center">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 mobile-link">Inicio</a>
+                <a href="#especialidades" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 mobile-link">Especialidades</a>
+                <a href="#experiencia" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 mobile-link">Experiencia</a>
+                
+                <a href="#practicas" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 mobile-link">Prácticas</a>
+                <a href="#proyectos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 mobile-link">Proyectos</a>
+                <a href="portafolio viejo.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 mobile-link">Portafolio antiguo</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section id="inicio" class="min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 w-full">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-8">
+                
+                
+                <div class="flex-1 flex flex-col items-center text-center md:items-start md:text-left space-y-6">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight">
+                        Schalel Perdomo
+                    </h1>
+                    <h2 class="text-xl md:text-3xl font-semibold text-primaryLight">
+                        Desarrollador Web
+                    </h2>
+                    <p class="text-gray-400 text-base md:text-lg max-w-lg leading-relaxed">
+                        Apasionado por crear experiencias web únicas y funcionales. Estudiante activo, siempre buscando aprender nuevas tecnologías y mejorar mis habilidades para aportar valor a cada proyecto.
+                    </p>
+                    
+                    
+                    <div class="flex space-x-4 pt-2">
+                        <a href="https://wa.me/18093287979" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-[#25D366] hover:text-white transition-all duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/itzthe_122/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-[#E1306C] hover:text-white transition-all duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto" class="inline-block bg-primaryLight hover:bg-primary text-white text-center font-medium py-3 px-8 rounded-lg shadow-lg shadow-primaryLight/30 transition-all duration-300 transform hover:-translate-y-1">
+                            Contáctame
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div class="flex-1 flex justify-center md:justify-end pb-8 md:pb-0">
+                    <div class="relative">
+                        
+                        <img src="img/007f79c4-3df1-4a5d-a27a-7f2c0fddf474-removebg-preview.png" 
+                             alt="Schalel Perdomo" 
+                             class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full glow-avatar z-10 relative">
+                        
+                        
+                        <div class="absolute inset-0 rounded-full bg-primaryLight opacity-20 blur-2xl -z-10"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="especialidades" class="py-20 bg-darkCard/30 border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <h3 class="text-3xl font-bold text-white mb-12 text-center">Mis Especialidades</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center max-w-4xl mx-auto">
+                
+                <div class="p-6 rounded-xl bg-darkCard border border-gray-800 hover:border-primaryLight/50 transition-colors">
+                    <i class="fab fa-html5 text-4xl text-[#E34F26] mb-4"></i>
+                    <h4 class="font-semibold text-white">HTML & CSS</h4>
+                    <p class="text-sm text-gray-400 mt-2">Creación de estructuras sólidas y estilos responsivos modernos.</p>
+                </div>
+                
+                <div class="p-6 rounded-xl bg-darkCard border border-gray-800 hover:border-primaryLight/50 transition-colors">
+                    <i class="fab fa-js text-4xl text-[#F7DF1E] mb-4"></i>
+                    <h4 class="font-semibold text-white">JavaScript</h4>
+                    <p class="text-sm text-gray-400 mt-2">Desarrollo de interactividad y lógica del lado del cliente.</p>
+                </div>
+                
+                <div class="p-6 rounded-xl bg-darkCard border border-gray-800 hover:border-primaryLight/50 transition-colors">
+                    <i class="fas fa-database text-4xl text-[#336791] mb-4"></i>
+                    <h4 class="font-semibold text-white">Bases de Datos</h4>
+                    <p class="text-sm text-gray-400 mt-2">Diseño, gestión y consultas para el almacenamiento seguro de información.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="experiencia" class="py-24">
+        <div class="max-w-4xl mx-auto px-6 md:px-12">
+            <h3 class="text-3xl font-bold text-white mb-12 text-center">Trayectoria y Experiencia</h3>
+            
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-700 before:to-transparent">
+                
+                
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-900 group-[.is-active]:bg-primaryLight text-gray-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 transition-colors">
+                        <i class="fas fa-book-open text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl bg-darkCard border border-gray-800 shadow-lg">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-lg text-white">Estudios en Desarrollo</h4>
+                            <span class="text-sm text-primaryLight font-medium">Actualidad</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Actualmente me encuentro estudiando activamente desarrollo web y programación, expandiendo mis conocimientos técnicos día a día.</p>
+                    </div>
+                </div>
+
+                
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 bg-gray-900 text-gray-500 hover:bg-primaryLight hover:text-white hover:border-primaryLight shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 transition-all cursor-pointer">
+                        <i class="fas fa-trophy text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl bg-darkCard border border-gray-800 shadow-lg">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-lg text-white">Feria de Desarrollo de Apps</h4>
+                            <span class="text-sm text-gray-500 font-medium">Reciente</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Participé activamente en una feria de desarrollo de aplicaciones, donde demostré habilidades prácticas y presenté proyectos funcionales e innovadores.</p>
+                    </div>
+                </div>
+
+                
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-700 bg-gray-900 text-gray-500 hover:bg-primaryLight hover:text-white hover:border-primaryLight shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 transition-all cursor-pointer">
+                        <i class="fas fa-code text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl bg-darkCard border border-gray-800 shadow-lg">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-lg text-white">Proyectos Prácticos</h4>
+                            <span class="text-sm text-gray-500 font-medium">Continuo</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Desarrollo continuo de prácticas autodidactas enfocadas en HTML, CSS, JavaScript y estructuración de bases de datos para fortalecer mi lógica de programación.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="practicas" class="py-24 relative bg-[#0f0f11] overflow-hidden border-t border-gray-800">
+        
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-96 bg-primary/5 blur-[150px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            
+            <div class="text-center mb-16 relative">
+                <div class="inline-flex items-center justify-center space-x-3 mb-4">
+                    <span class="h-px w-10 bg-gradient-to-r from-transparent to-primaryLight"></span>
+                    <span class="text-primaryLight text-sm font-bold tracking-widest uppercase">PRÁCTICAS REALIZADAS</span>
+                    <span class="h-px w-10 bg-gradient-to-l from-transparent to-primaryLight"></span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">Mis Prácticas</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">Un recorrido detallado por las investigaciones y prácticas que he desarrollado en mi etapa formativa.</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="formularios practica.html" class="inline-flex items-center gap-2 rounded-full border border-primaryLight/50 bg-primaryLight/10 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primaryLight hover:shadow-lg hover:shadow-primaryLight/30">
+                        <i class="fas fa-file-alt"></i>
+                        Prácticas
+                    </a>
+                    <a href="carrusel.html" class="inline-flex items-center gap-2 rounded-full border border-cyan-400/50 bg-cyan-400/10 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-400/30">
+                        <i class="fas fa-images"></i>
+                        Carrusel
+                    </a>
+                    <a href="3 cajas.html" class="inline-flex items-center gap-2 rounded-full border border-amber-400/50 bg-amber-400/10 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-400/30">
+                        <i class="fas fa-cubes"></i>
+                        3 Cajas
+                    </a>
+                    <a href="desenfoque.html" class="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/50 bg-fuchsia-400/10 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-fuchsia-400 hover:shadow-lg hover:shadow-fuchsia-400/30">
+                        <i class="fas fa-image"></i>
+                        Desenfoque
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                
+                <a href="Actividad 1 Schalel .html" class="group relative bg-darkCard border border-gray-800 rounded-2xl p-8 hover:border-primaryLight/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(107,33,168,0.2)] flex flex-col h-full overflow-hidden">
+                    
+                    <div class="absolute -bottom-6 -right-2 text-8xl font-black text-gray-800/20 group-hover:text-primaryLight/10 transition-colors z-0 select-none">01</div>
+                    
+                    <div class="relative z-10 flex-grow">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-primaryLight mb-6 group-hover:bg-primaryLight group-hover:text-white transition-colors">
+                            <i class="fas fa-file-code text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primaryLight transition-colors">Actividad 1</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Introducción y primeros pasos. Conceptos básicos y fundamentos aplicados en un entorno estructurado.</p>
+                    </div>
+                    
+                    <div class="relative z-10 mt-auto pt-4 border-t border-gray-800 group-hover:border-primaryLight/30 flex items-center justify-between transition-colors">
+                        <span class="text-sm font-semibold text-white group-hover:text-primaryLight transition-colors">Explorar asignación</span>
+                        <div class="w-8 h-8 rounded-full bg-gray-800 group-hover:bg-primaryLight flex items-center justify-center transition-colors">
+                            <i class="fas fa-arrow-right text-xs text-gray-400 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                </a>
+
+                
+                <a href="Actividad 2 Schalel.html" class="group relative bg-darkCard border border-gray-800 rounded-2xl p-8 hover:border-primaryLight/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(107,33,168,0.2)] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -bottom-6 -right-2 text-8xl font-black text-gray-800/20 group-hover:text-primaryLight/10 transition-colors z-0 select-none">02</div>
+                    
+                    <div class="relative z-10 flex-grow">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-primaryLight mb-6 group-hover:bg-primaryLight group-hover:text-white transition-colors">
+                            <i class="fas fa-laptop-code text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primaryLight transition-colors">Actividad 2</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Profundización en estructuras web. Creación de interfaces y componentes con mejor organización.</p>
+                    </div>
+                    
+                    <div class="relative z-10 mt-auto pt-4 border-t border-gray-800 group-hover:border-primaryLight/30 flex items-center justify-between transition-colors">
+                        <span class="text-sm font-semibold text-white group-hover:text-primaryLight transition-colors">Explorar asignación</span>
+                        <div class="w-8 h-8 rounded-full bg-gray-800 group-hover:bg-primaryLight flex items-center justify-center transition-colors">
+                            <i class="fas fa-arrow-right text-xs text-gray-400 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                </a>
+
+                
+                <a href="Actividad 3 Schalel.html" class="group relative bg-darkCard border border-gray-800 rounded-2xl p-8 hover:border-primaryLight/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(107,33,168,0.2)] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -bottom-6 -right-2 text-8xl font-black text-gray-800/20 group-hover:text-primaryLight/10 transition-colors z-0 select-none">03</div>
+                    
+                    <div class="relative z-10 flex-grow">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-primaryLight mb-6 group-hover:bg-primaryLight group-hover:text-white transition-colors">
+                            <i class="fas fa-database text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primaryLight transition-colors">Actividad 3</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Manejo de información y datos. Integración de bases y estructuras de almacenamiento eficientes.</p>
+                    </div>
+                    
+                    <div class="relative z-10 mt-auto pt-4 border-t border-gray-800 group-hover:border-primaryLight/30 flex items-center justify-between transition-colors">
+                        <span class="text-sm font-semibold text-white group-hover:text-primaryLight transition-colors">Explorar asignación</span>
+                        <div class="w-8 h-8 rounded-full bg-gray-800 group-hover:bg-primaryLight flex items-center justify-center transition-colors">
+                            <i class="fas fa-arrow-right text-xs text-gray-400 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                </a>
+
+                
+                <a href="Actividad 4 Schalel.html" class="group relative bg-darkCard border border-gray-800 rounded-2xl p-8 hover:border-primaryLight/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(107,33,168,0.2)] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -bottom-6 -right-2 text-8xl font-black text-gray-800/20 group-hover:text-primaryLight/10 transition-colors z-0 select-none">04</div>
+                    
+                    <div class="relative z-10 flex-grow">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-primaryLight mb-6 group-hover:bg-primaryLight group-hover:text-white transition-colors">
+                            <i class="fas fa-cogs text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primaryLight transition-colors">Actividad 4</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Lógica de programación. Desarrollo de interactividad avanzada y resolución de problemas algorítmicos.</p>
+                    </div>
+                    
+                    <div class="relative z-10 mt-auto pt-4 border-t border-gray-800 group-hover:border-primaryLight/30 flex items-center justify-between transition-colors">
+                        <span class="text-sm font-semibold text-white group-hover:text-primaryLight transition-colors">Explorar asignación</span>
+                        <div class="w-8 h-8 rounded-full bg-gray-800 group-hover:bg-primaryLight flex items-center justify-center transition-colors">
+                            <i class="fas fa-arrow-right text-xs text-gray-400 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                </a>
+
+                
+                <a href="Actividad 5 Schalel.html" class="group relative bg-darkCard border border-gray-800 rounded-2xl p-8 hover:border-primaryLight/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(107,33,168,0.2)] flex flex-col h-full overflow-hidden">
+                    <div class="absolute -bottom-6 -right-2 text-8xl font-black text-gray-800/20 group-hover:text-primaryLight/10 transition-colors z-0 select-none">05</div>
+                    
+                    <div class="relative z-10 flex-grow">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-primaryLight mb-6 group-hover:bg-primaryLight group-hover:text-white transition-colors">
+                            <i class="fas fa-layer-group text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primaryLight transition-colors">Actividad 5</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Práctica integradora. Consolidación de conocimientos fusionando diseño, lógica e información.</p>
+                    </div>
+                    
+                    <div class="relative z-10 mt-auto pt-4 border-t border-gray-800 group-hover:border-primaryLight/30 flex items-center justify-between transition-colors">
+                        <span class="text-sm font-semibold text-white group-hover:text-primaryLight transition-colors">Explorar asignación</span>
+                        <div class="w-8 h-8 rounded-full bg-gray-800 group-hover:bg-primaryLight flex items-center justify-center transition-colors">
+                            <i class="fas fa-arrow-right text-xs text-gray-400 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                </a>
+
+                
+                <a href="Actividad 5.1.html" class="group relative bg-gradient-to-br from-darkCard to-[#1a0b2e] border border-primaryLight/30 rounded-2xl p-8 hover:border-primaryLight transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(147,51,234,0.3)] flex flex-col h-full overflow-hidden md:col-span-2 lg:col-span-1">
+                    <div class="absolute -bottom-6 -right-2 text-8xl font-black text-primaryLight/5 group-hover:text-primaryLight/10 transition-colors z-0 select-none">5.1</div>
+                    
+                    <div class="relative z-10 flex-grow">
+                        <div class="w-12 h-12 rounded-full bg-primaryLight/20 flex items-center justify-center text-primaryLight mb-6 border border-primaryLight/50 group-hover:bg-primaryLight group-hover:text-white transition-colors">
+                            <i class="fas fa-star text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primaryLight transition-colors">Actividad 5.1 <span class="text-[10px] ml-2 bg-primaryLight/20 text-primaryLight px-2 py-1 rounded-full uppercase tracking-wider font-bold">Extra</span></h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">Anexo especial con optimizaciones, correcciones y funcionalidades adicionales sobre el proyecto principal.</p>
+                    </div>
+                    
+                    <div class="relative z-10 mt-auto pt-4 border-t border-primaryLight/20 group-hover:border-primaryLight/50 flex items-center justify-between transition-colors">
+                        <span class="text-sm font-semibold text-white group-hover:text-primaryLight transition-colors">Explorar asignación</span>
+                        <div class="w-8 h-8 rounded-full bg-primaryLight/20 group-hover:bg-primaryLight flex items-center justify-center transition-colors">
+                            <i class="fas fa-arrow-right text-xs text-white"></i>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="proyectos" class="py-20 bg-darkCard/20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <h3 class="text-3xl font-bold text-white mb-4 text-center">Mis Proyectos</h3>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">Una selección de mis trabajos más recientes. Explora mis proyectos para ver cómo aplico mis conocimientos en el mundo real.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                
+                <div class="project-card bg-darkCard rounded-2xl overflow-hidden border border-gray-800 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/linguoflow.jfif" alt="LinguoFlow" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://linguoflow.github.io/LinguoFlow/" target="_blank" rel="noopener noreferrer" class="bg-primaryLight text-white px-4 py-2 rounded-lg font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform">Visitar web</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="text-xs font-semibold bg-primaryLight/20 text-primaryLight px-2 py-1 rounded">HTML/CSS</span>
+                            <span class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded">JavaScript</span>
+                            <span class="text-xs font-semibold bg-green-500/20 text-green-400 px-2 py-1 rounded">Base de Datos</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">LinguoFlow</h4>
+                        <p class="text-gray-400 text-sm mb-4">Plataforma para aprender ingl&eacute;s con mundos, rachas, progreso y actividades interactivas, dise&ntilde;ada para motivar la pr&aacute;ctica diaria.</p>
+                        <div class="flex items-center gap-3">
+                            <a href="https://linguoflow.github.io/LinguoFlow/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors text-sm font-medium"><i class="fas fa-globe mr-1"></i> Visitar sitio</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="project-card bg-darkCard rounded-2xl overflow-hidden border border-gray-800 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/sistema operativo.png" alt="ERP Enterprise" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://erpenterprise.github.io/ERP/" target="_blank" rel="noopener noreferrer" class="bg-primaryLight text-white px-4 py-2 rounded-lg font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform">Visitar web</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="text-xs font-semibold bg-primaryLight/20 text-primaryLight px-2 py-1 rounded">HTML/CSS</span>
+                            <span class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded">JavaScript</span>
+                            <span class="text-xs font-semibold bg-green-500/20 text-green-400 px-2 py-1 rounded">Base de Datos</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">ERP Enterprise</h4>
+                        <p class="text-gray-400 text-sm mb-4">Todo tu negocio, conectado en una sola plataforma. ERP Enterprise simplifica la administración empresarial con tecnología moderna, control total y decisiones más inteligentes.</p>
+                        <div class="flex items-center gap-3">
+                            <a href="https://erpenterprise.github.io/ERP/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors text-sm font-medium"><i class="fas fa-globe mr-1"></i> Visitar sitio</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <footer id="contacto" class="bg-[#0a0a0c] border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-2xl font-bold text-white mb-6">¿Interesado en trabajar juntos?</h2>
+            <p class="text-gray-400 mb-8">Actualmente estoy disponible para nuevos proyectos y oportunidades laborales.</p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=schaleleliasperdomoluciano734@gmail.com&su=Contacto%20desde%20tu%20portafolio" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-black hover:bg-gray-200 font-bold py-3 px-8 rounded-lg transition-colors">
+                Envíame un correo
+            </a>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 text-sm text-gray-500">
+                <p>&copy; 2026 Schalel Perdomo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+    </script>
+</body>
+</html>
