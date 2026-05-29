@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background:
+                radial-gradient(circle at 18% 18%, rgba(255, 183, 77, 0.26), transparent 26%),
+                radial-gradient(circle at 82% 14%, rgba(0, 217, 255, 0.24), transparent 24%),
+                radial-gradient(circle at 70% 82%, rgba(174, 107, 255, 0.26), transparent 28%),
+                radial-gradient(circle at 50% 52%, rgba(255, 92, 154, 0.16), transparent 30%),
+                linear-gradient(135deg, #09111f 0%, #102a43 36%, #123f5c 66%, #0c6a78 100%);
+            background-size: 220% 220%;
+            animation: fondo 12s ease infinite;
+            background-attachment: fixed;
+            color: #333333;
+            margin: 0;
+            padding: 20px 20px 40px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: auto;
+            border-radius: 999px;
+            pointer-events: none;
+            filter: blur(50px);
+            opacity: 0.42;
+            z-index: 0;
+        }
+
+        body::before {
+            width: 280px;
+            height: 280px;
+            left: -60px;
+            top: 10%;
+            background: rgba(255, 166, 77, 0.22);
+        }
+
+        body::after {
+            width: 340px;
+            height: 340px;
+            right: -90px;
+            bottom: -40px;
+            background: rgba(0, 217, 255, 0.19);
+        }
+
+        .back-button {
+            position: fixed;
+            top: 18px;
+            left: 18px;
+            z-index: 3;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            color: #ffffff;
+            background: rgba(10, 18, 32, 0.52);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+            transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            background: rgba(18, 30, 52, 0.7);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+        }
+
+        .back-button .arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(79, 172, 254, 0.9), rgba(0, 242, 254, 0.9));
+            color: #0b1730;
+            font-weight: 800;
+        }
+
+        @keyframes fondo {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.7);
+            margin: 0 auto 34px;
+            max-width: 620px;
+        }
+
+        .formularios {
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto;
+            background-image: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 150, 255, 0.3);
+            color: #ffffff;
+            text-align: center;
+            padding: 34px 30px 30px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        .formularios h2 {
+            color: #ffffff;
+            margin-top: 0;
+            padding-top: 6px;
+            margin-bottom: 24px;
+            font-size: 28px;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+            margin: 0 0 8px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            outline: none;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            margin-bottom: 22px;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        select:focus,
+        textarea:focus {
+            background-color: rgba(255, 255, 255, 0.25);
+            border-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        select option {
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            border: 0;
+            background-color: #ffffff;
+            color: #0084ff;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 4px;
+        }
+
+        input[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px;
+            }
+
+            .back-button {
+                top: 14px;
+                left: 14px;
+                padding: 10px 14px;
+                gap: 8px;
+                font-size: 0.9rem;
+            }
+
+            .back-button .arrow {
+                width: 24px;
+                height: 24px;
+            }
+
+            .formularios {
+                margin: 0 auto;
+                padding: 28px 18px 24px;
+            }
+
+            .formularios h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button" aria-label="Volver al portafolio">
+        <span class="arrow">&larr;</span>
+        Volver al portafolio
+    </a>
+    <hr>
+
+    <div class="formularios">
+        <h2>Formulario de Registro</h2>
+
+        <form>
+            <input type="text" placeholder="Usuario">
+            <input type="password" placeholder="Contraseña">
+
+            <p>Selecciona una tanda:</p>
+            <select>
+                <option>Mañana</option>
+                <option>Tarde</option>
+                <option>Noche</option>
+            </select>
+
+            <textarea rows="4" placeholder="Escribe un comentario"></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
